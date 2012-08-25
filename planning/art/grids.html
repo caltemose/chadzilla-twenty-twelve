@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>grids</title>
+	<style type="text/css">
+		ul { list-style: none; }
+		li { 
+			float: left; 
+			position: relative; 
+			height: 200px;
+		}
+		div {
+			clear: both;
+			margin: 2em;
+			overflow: auto;
+		}
+		.edge-gutter { background: #ddd }
+		.col-left, .col-right { background: #999 }
+		.col-mid { background: #777 }
+		
+		.three-col .edge-gutter {
+			width: 10px;
+		}
+		.three-col .col-left, .three-col .col-right {
+			width: 20px;
+		}
+		.three-col .col-mid {
+			width: 260px;
+		}
+		.three-col .col-gutter {
+			width: 20px;
+		}
+		
+		.four-col .edge-gutter {
+			width: 10px;
+		}
+		.four-col .col-left, .four-col .col-right {
+			width: 20px;
+		}
+		.four-col .col-mid {
+			width: 180px;
+		}
+		.four-col .col-gutter {
+			width: 20px;
+		}
+	</style>
+</head>
+<body>
+
+<div class="three-col">
+	<ul>
+		<li class="edge-gutter"></li>
+
+		<li class="col-left"></li>
+		<li class="col-mid"></li>
+		<li class="col-right"></li>
+
+		<li class="col-gutter"></li>
+
+		<li class="col-left"></li>
+		<li class="col-mid"></li>
+		<li class="col-right"></li>
+
+		<li class="col-gutter"></li>
+		
+		<li class="col-left"></li>
+		<li class="col-mid"></li>
+		<li class="col-right"></li>
+
+		<li class="edge-gutter"></li>
+	</ul>
+</div>
+
+<div class="four-col">
+	<ul>
+		<li class="edge-gutter"></li>
+
+		<li class="col-left"></li>
+		<li class="col-mid"></li>
+		<li class="col-right"></li>
+
+		<li class="col-gutter"></li>
+
+		<li class="col-left"></li>
+		<li class="col-mid"></li>
+		<li class="col-right"></li>
+
+		<li class="col-gutter"></li>
+		
+		<li class="col-left"></li>
+		<li class="col-mid"></li>
+		<li class="col-right"></li>
+
+		<li class="col-gutter"></li>
+		
+		<li class="col-left"></li>
+		<li class="col-mid"></li>
+		<li class="col-right"></li>
+
+		<li class="edge-gutter"></li>
+	</ul>
+</div>
+
+</body>
+</html>
