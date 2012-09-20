@@ -167,7 +167,7 @@ a:active {
     font-size: 2.0em;
     font-family: '../fonts/ChunkFiveRegular';
     color: #494949;
-    padding: 26px 20px 4px 20px;
+    padding: 26px 5% 4px;
     margin: 0;
 }
 .homebox.photography h2 {
@@ -175,9 +175,28 @@ a:active {
 }
 
 
+.footer {
+    font-size: 0.8em;
+}
+
+.homebox p {
+    margin: 0 0 .3em 0;
+    padding: 0 5%;
+}
+.homebox.work img {
+}
+
+
+#mq480,
+#mq767,
+#mq768,
+#mq1024 {
+    display: none;
+}
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 1024px) {
+@media (min-width: 980px) {
+    #mq1024 {display:block;}
     #logo {
         float: left;
         position: relative;
@@ -226,17 +245,66 @@ a:active {
 
 }
 
-/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 979px) {
-    
+    #mq768 {display:block;}
+    #logo {
+        float: left;
+        position: relative;
+    }
+    #navbar nav {
+        float: right;
+        position: relative;
+    }
+    #navbar nav ul {
+        height: 1em;
+    }
+    #navbar nav ul li {
+        font-size: 1.2em;
+        display: inline;
+        margin-left: 1em;
+    }
+    .container {
+        width: 95%;
+    }
+    .col2 {
+        float: left;
+        position: relative;
+        width: 45%;
+    }
+    .col2:first-child {
+        margin-right: 20px;
+    }
+
+    .homebox {
+        height: 420px;
+        border-bottom: 10px solid #8c8c8c;
+        margin-bottom: 1em;
+        position: relative;
+    }
+    .homebox p {
+        margin: 0 0 .5em 0;
+        padding: 0 20px;
+    }
+    .homebox.work img {
+        position: absolute;
+        bottom: 0;
+    }
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+    #mq767 {display:block;}
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    #mq480 {display:block;}
+    #logo img {
+        max-width: 100%;
+        height: auto;
+        /*padding: 0 2.5%;*/
+    }
 }
 
 
