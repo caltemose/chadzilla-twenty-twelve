@@ -1,0 +1,99 @@
+/* 
+ * 2. Styles for large screens
+ */
+
+#mqSmall, #mqMedium {color:#aaa}
+#mqLarge {color:#000}
+
+#logo {
+	float: left;
+	position: relative;
+	border: none;
+	text-align: left;
+	margin: 0;
+	padding: 0.6em 0.6em 0.2em 0;
+}
+
+#navbar nav {
+	float: right;
+	position: relative;
+	margin: 1em 0;
+}
+#navbar nav ul {
+	height: 1em;
+}
+#navbar nav ul li {
+	font-size: 1.2em;
+	display: inline;
+	margin-left: 1em;
+}
+
+#container {
+	width: 940px;
+}
+.col2 {
+	float: left;
+	position: relative;
+	
+	width: 460px;
+}
+.col2:first-child {
+	margin-right: 20px;
+}
+
+.homebox {
+	border-bottom: 10px solid #8c8c8c;
+	margin-bottom: 1em;
+	position: relative;
+	
+	height: 330px;
+}
+.homebox p {
+	margin: 0 0 .5em 0;
+	padding: 0 20px;
+}
+.homebox.work img {
+	position: absolute;
+	bottom: 0;
+}
+
+.footer {
+	text-align: left;
+}
+.footer .social-links, .footer .copyright {
+	position: relative;
+	width: 40%;
+}
+.footer .social-links {
+	float: left;
+}
+.footer .copyright {
+	float: right;
+	text-align: right;
+}
+
+/* 
+ * 1. Styles shared by medium and large screens
+ */
+@media screen and (min-width: 30em) and (max-width: 63.236em) {
+
+	#container {
+		width: 95%;
+	}
+	.col2 {
+		width: 45%;
+	}	
+	.homebox {
+		height: 420px;
+	}
+	
+	#mqSmall, #mqLarge {color:#aaa}
+	#mqMedium {color:#000}
+
+}
+
+
+
+
+
+

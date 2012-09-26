@@ -9,106 +9,12 @@
     font-style: normal;
 }
 
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-/* box sizing fix */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
-
+/* ---------------------------------------------------------------------------------
+ * Default tag elements
+ * ------------------------------------------------------------------------------ */
+ 
 body {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-body {
-    background: #eaeaea;
+    background: #eaeaea url(../img/ui/page-bg.png) repeat-x top;
     font-family: Georgia, 'Times New Roman', serif;
     color: #494949;
 }
@@ -125,35 +31,61 @@ a:active {
 }
 
 
-.container {
+/* ---------------------------------------------------------------------------------
+ * Core structural classes and elements
+ * ------------------------------------------------------------------------------ */
+ 
+#container {
     margin: 0 auto;
 }
 
 #navbar {
     width: 100%;
-    background: #2f2f2f;
-    border-bottom: 3px solid #b6b6b6;
     margin-bottom: 2em;
+}
+#navbar li {
+	font-size: 2em;
+	width: 100%;
+	text-align: center;
 }
 #navbar a:hover, #navbar a.selected {
     color: #fff;
 }
 #logo {
-    margin-top: 8px;
+    padding: 0.6em 0;
+    margin-bottom: 0.6em;
+    text-align: center;
 }
+#logo img {
+	max-width: 100%;
+}
+
 #navbar nav {
     padding: 0; margin: 0;
     font-family: '../fonts/ChunkFiveRegular';
 }
-.page.container {
+#navbar nav ul {
+    padding: 0;
+    margin: 0;
 }
 
-.col2 {
+.footer {
+    font-size: 0.8em;
+    width: 100%;
+    
+    text-align: center;
+    margin-bottom: 2em;
 }
+
+
+/* ---------------------------------------------------------------------------------
+ * Home page only
+ * ------------------------------------------------------------------------------ */
 
 .homebox {
     background: #fff;
 }
+/* box background colors */
 .homebox.articles {
     background: #82c158;
 }
@@ -163,11 +95,12 @@ a:active {
 .homebox.work {
     background: #f7941d;
 }
+/* box headers */
 .homebox h2 {
     font-size: 2.0em;
     font-family: '../fonts/ChunkFiveRegular';
     color: #494949;
-    padding: 26px 5% 4px;
+    padding: 0; /* 26px 5% 4px; */
     margin: 0;
 }
 .homebox.photography h2 {
@@ -175,319 +108,12 @@ a:active {
 }
 
 
-.footer {
-    font-size: 0.8em;
-}
-
-.homebox p {
-    margin: 0 0 .3em 0;
-    padding: 0 5%;
-}
-.homebox.work img {
-}
 
 
-#mq480,
-#mq767,
-#mq768,
-#mq1024 {
-    display: none;
-}
-
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 980px) {
-    #mq1024 {display:block;}
-    #logo {
-        float: left;
-        position: relative;
-    }
-    #navbar nav {
-        float: right;
-        position: relative;
-    }
-    #navbar nav ul {
-        height: 1em;
-    }
-    #navbar nav ul li {
-        font-size: 1.2em;
-        display: inline;
-        margin-left: 1em;
-    }
-
-    .container {
-        width: 940px;
-    }
-    .col2 {
-        float: left;
-        position: relative;
-    }
-    .col2 {
-        width: 460px;
-    }
-    .col2:first-child {
-        margin-right: 20px;
-    }
-
-    .homebox {
-        height: 330px;
-        border-bottom: 10px solid #8c8c8c;
-        margin-bottom: 1em;
-        position: relative;
-    }
-    .homebox p {
-        margin: 0 0 .5em 0;
-        padding: 0 20px;
-    }
-    .homebox.work img {
-        position: absolute;
-        bottom: 0;
-    }
-
-}
-
-/* Portrait tablet to landscape */
-@media (min-width: 768px) and (max-width: 979px) {
-    #mq768 {display:block;}
-    #logo {
-        float: left;
-        position: relative;
-    }
-    #navbar nav {
-        float: right;
-        position: relative;
-    }
-    #navbar nav ul {
-        height: 1em;
-    }
-    #navbar nav ul li {
-        font-size: 1.2em;
-        display: inline;
-        margin-left: 1em;
-    }
-    .container {
-        width: 95%;
-    }
-    .col2 {
-        float: left;
-        position: relative;
-        width: 45%;
-    }
-    .col2:first-child {
-        margin-right: 20px;
-    }
-
-    .homebox {
-        height: 420px;
-        border-bottom: 10px solid #8c8c8c;
-        margin-bottom: 1em;
-        position: relative;
-    }
-    .homebox p {
-        margin: 0 0 .5em 0;
-        padding: 0 20px;
-    }
-    .homebox.work img {
-        position: absolute;
-        bottom: 0;
-    }
-}
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-    #mq767 {display:block;}
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-    #mq480 {display:block;}
-    #logo img {
-        max-width: 100%;
-        height: auto;
-        /*padding: 0 2.5%;*/
-    }
-}
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
 
 /*
- * Image replacement
+ * TESTING ONLY
+ * @TODO Delete this code
  */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
-}
-
-
-
-
-
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow:none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
+#mqSmall {color:#000;}
+#mqMedium, #mqLarge {color:#aaa;}
