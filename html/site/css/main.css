@@ -57,11 +57,12 @@ a:active {
     text-align: center;
 }
 #logo img {
-	max-width: 100%;
+	max-width: 80%;
 }
 
 #navbar nav {
-    padding: 0; margin: 0;
+    padding: 0; 
+    margin: 1.3em 0 0 0;
     font-family: '../fonts/ChunkFiveRegular';
 }
 #navbar nav ul {
@@ -69,13 +70,20 @@ a:active {
     margin: 0;
 }
 
+.page {
+    margin: 0 auto;
+    width: 90%;
+}
+
+
 .footer {
     font-size: 0.8em;
-    width: 100%;
-    
-    text-align: center;
-    margin-bottom: 2em;
+    width: 90%;
+    margin: 0 auto 2em auto;
 }
+
+
+
 
 
 /* ---------------------------------------------------------------------------------
@@ -84,6 +92,7 @@ a:active {
 
 .homebox {
     background: #fff;
+    padding: 1.25em;
 }
 /* box background colors */
 .homebox.articles {
@@ -94,18 +103,43 @@ a:active {
 }
 .homebox.work {
     background: #f7941d;
+    padding: 1.2em 0 0 0;
+    overflow: hidden;
 }
+.homebox.work > div {
+    padding: 0 1.25em 1.25em;
+}
+
 /* box headers */
 .homebox h2 {
     font-size: 2.0em;
     font-family: '../fonts/ChunkFiveRegular';
-    color: #494949;
-    padding: 0; /* 26px 5% 4px; */
+    color: #545454;
+    padding: 0;
     margin: 0;
 }
 .homebox.photography h2 {
     color: #fff;
 }
+
+
+@media screen and (max-width: 30em) {
+
+    #navbar nav a {
+        display: block;
+        margin: .3em 5%;
+        width: 90%;
+        padding: .1em .4em;
+        background: #d2d2d2;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        border-radius: 0.5em;
+    }
+
+}
+
+
+
 
 
 

@@ -8,7 +8,6 @@
 #logo {
 	float: left;
 	position: relative;
-	border: none;
 	text-align: left;
 	margin: 0;
 	padding: 0.6em 0.6em 0.2em 0;
@@ -31,6 +30,12 @@
 #container {
 	width: 940px;
 }
+
+.page {
+	margin: 0;
+    width: inherit;
+}
+
 .col2 {
 	float: left;
 	position: relative;
@@ -50,15 +55,14 @@
 }
 .homebox p {
 	margin: 0 0 .5em 0;
-	padding: 0 20px;
 }
 .homebox.work img {
 	position: absolute;
 	bottom: 0;
 }
-
 .footer {
-	text-align: left;
+	width: 100%;
+	padding: 0;
 }
 .footer .social-links, .footer .copyright {
 	position: relative;
@@ -73,9 +77,17 @@
 }
 
 /* 
- * 1. Styles shared by medium and large screens
+ * medium single-column
  */
 @media screen and (min-width: 30em) and (max-width: 63.236em) {
+
+	#logo {
+		margin-top: .2em;
+		width: 42%;
+	}
+	#logo img {
+		max-width: 100%;
+	}
 
 	#container {
 		width: 95%;
