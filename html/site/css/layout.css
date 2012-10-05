@@ -33,17 +33,25 @@
 
 .page {
 	margin: 0;
-    width: inherit;
+    width: 100%;
 }
 
 .col2 {
 	float: left;
 	position: relative;
-	
-	width: 460px;
+	width: 28.75em;
 }
 .col2:first-child {
-	margin-right: 20px;
+	margin-right: 1.25em;
+}
+.col3 { 
+	float: left;
+	position: relative;
+	width: 18.75em;
+	margin-right: 1.25em;
+}
+.col3:last-child {
+	margin-right: 0;
 }
 
 .homebox {
@@ -90,13 +98,44 @@
 	}
 
 	#container {
-		width: 95%;
+		width: 90%;
+		margin: 0 auto;
+		padding: 0;
 	}
 	.col2 {
-		width: 45%;
-	}	
+		float: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.col3 {
+		float: none;
+		width: 100%;
+		margin: 0 0 1em;
+		padding: 0 0 2em;
+	}
+	.col3 > div img {
+	    xfloat: left;
+	    xposition: relative;
+	    margin: 0 0 0.25em;
+	}
+	.col3 a, .col3 h3 {
+		margin-left: 0;
+	}
+	.col3 p {
+		max-width: 36em;
+		padding: 0;
+	}
+
 	.homebox {
-		height: 420px;
+		height: auto;
+	}
+	.homebox.work {
+		min-height: 300px;
+	}
+	.homebox p {
+		max-width: 32em;
 	}
 	
 	#mqSmall, #mqLarge {color:#aaa}
