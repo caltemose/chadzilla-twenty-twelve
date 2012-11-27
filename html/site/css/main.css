@@ -133,9 +133,11 @@ hr {
 
 .footer {
     font-family: Arial, sans-serif;
-    font-size: 0.7em;
     width: 90%;
     margin: 0 auto 2em auto;
+}
+.footer div {
+    font-size: 0.7em;
 }
 
 /* ---------------------------------------------------------------------------------

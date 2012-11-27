@@ -102,8 +102,15 @@
 		margin: 0 auto;
 		padding: 0;
 	}
+
+	.page {
+		width: 32em;
+		margin: 0 auto;
+	}
+
 	.col2 {
 		float: none;
+		max-width: 32em;
 		width: 100%;
 		margin: 0;
 		padding: 0;
@@ -137,7 +144,15 @@
 	.homebox p {
 		max-width: 32em;
 	}
+	.homebox.work img {
+		
+	}
 	
+	.footer {
+		margin: 0 auto;
+		width: 32em;
+	}
+
 	#mqSmall, #mqLarge {color:#aaa}
 	#mqMedium {color:#000}
 
