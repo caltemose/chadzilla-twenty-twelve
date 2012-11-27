@@ -160,6 +160,7 @@ hr {
 }
 .homebox.photography {
     background: #9b1700;
+    padding: 1.25em 0 0 0;
 }
 .homebox.work {
     background: #f7941d;
@@ -180,8 +181,11 @@ hr {
 }
 .homebox.photography h2 {
     color: #fff;
+    padding: 0 0 .25em .75em;
 }
-
+.homebox.photography .photo img {
+    max-width: 100%;
+}
 
 @media screen and (max-width: 33.125em) {
 
