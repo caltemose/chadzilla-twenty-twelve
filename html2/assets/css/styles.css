@@ -1,6 +1,7 @@
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {display: block;} video {display: inline-block;*display: inline;*zoom: 1;}
 html {font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;} html,button,input,select,textarea {font-family: serif;}
 a:focus {outline: thin dotted;} a:active,a:hover {outline: 0;} img {border: 0; -ms-interpolation-mode: bicubic;} svg:not(:root) {overflow: hidden;} figure {margin: 0;} form {margin: 0;}
+img {vertical-align: middle;}
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after {content: " "; display: table;} .clearfix:after {clear: both;} .clearfix {*zoom: 1;}
 /*
@@ -9,6 +10,12 @@ my styles below
 */
 @font-face {font-family: '../fonts/ChunkFiveRegular'; src: url('../fonts/Chunkfive-webfont.eot'); src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Chunkfive-webfont.woff') format('woff'), url('../fonts/Chunkfive-webfont.ttf') format('truetype'), url('../fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg'); font-weight: normal; font-style: normal;}
 
+
+/*
+--------------------------------------------------------
+adjustments to standard tags
+
+*/
 body {
 	margin: 0;
 	background: #eaeaea;
@@ -19,43 +26,254 @@ a {
 	color: #0052A5;
 	text-decoration: none;
 }
+a:hover, a:focus {
+	text-decoration: underline;
+}
 p {
 	line-height: 130%;
 }
 
+
+/*
+--------------------------------------------------------
+site container and primary header
+
+*/
 #site {
 	width: 100%;
+	position: relative;
 }
 
 #site > header {
 	background: #2f2f2f;
-	padding-top: 1.2em;
+	padding: 0.6em 0 0.3em;
 	border-bottom: 0.1875em solid #b6b6b6;
-	margin-bottom: 0.5em;
 }
 
 #site > header > img {
 	padding-left: 6.25%;
 }
 
+
+/*
+--------------------------------------------------------
+section and article common styles
+
+*/
 section {
 	margin-bottom: 1.25em;
+	padding-bottom: 0.75em;
 	border-bottom: 0.5em solid #a3a3a3;
 }
-
 section h1 {
 	font-family: '../fonts/ChunkFiveRegular';
 	font-size: 2.5em;
 	color: #494949;
-	background: #cccccc;
-	padding: 0.5em 6.25% 0 6.25%;
-	margin: 0 0 0.5em;
+	padding: 0.4em 6.25% 0.1em 6.25%;
+	margin: 0;
 }
-
 section p {
 	margin: 0 6.25% 0.8em 6.25%;
 }
+section > article h2 {
+	font-family: '../fonts/ChunkFiveRegular';
+	margin: 0 0 0.5em 0;
+	padding: 0.4em 6.25%;
+	font-size: 1.1em;
+}
+section > img {
+	width: 100%;
+}
+section > a img {
+	width: 100%;
+	margin-bottom: 0.8em;
+}
+article a.headimg {
+	display: block;
+	width: 100%;
+	height: 7em;
+	overflow: hidden;
+}
+article a.headimg img {
+	width: 100%;
+}
 
+
+/*
+--------------------------------------------------------
+specific section styles
+
+*/
+
+/*    #articles    */
+section#articles {
+	background: #b7dc9f;
+	padding-bottom: 0;
+}
+section#articles h1 {
+	background: #82c158;
+}
+section#articles h2 {
+	background: #d4eac5;
+}
+section#articles article {
+	margin-bottom: 2em;
+}
+
+/*    #photography    */
+section#photography {
+	background: #ecd2df;
+}
+section#photography h1 {
+	color: #fff;
+	background: #ff0082;
+}
+
+/*    #timelapse    */
+section#timelapse {
+	background: #bae9f8;
+}
+section#timelapse h1 {
+	color: #fff;
+	background: #1ab6e9;
+}
+section#timelapse iframe {
+	margin-bottom: 0.8em;
+}
+
+/*    #who    */
 section#who {
 	background: #ffffff;
+}
+section#who h1 {
+	background: #cccccc;
+	margin-bottom: 0.4em;
+}
+
+/*
+--------------------------------------------------------
+social navigation icons
+
+*/
+nav#social {
+	padding: 0 0 0.8em 6.25%;
+}
+nav#social a.icon {
+	display: block;
+	float: left;
+	width: 36px;
+	height: 36px;
+	margin-right: 0.6em;
+	background-image: url(../img/social-icons.svg);
+	background-repeat: none;
+	overflow: hidden;
+	text-indent: -10em;
+}
+nav#social a.icon.linkedin {
+	background-position: 0 0;
+}
+nav#social a.icon.twitter {
+	background-position: -40px 0;
+}
+nav#social a.icon.tumblr {
+	background-position: -80px 0;
+}
+nav#social a.icon.flickr {
+	background-position: -120px 0;
+}
+nav#social a.icon.vimeo {
+	background-position: -160px 0;
+}
+
+
+/*
+--------------------------------------------------------
+media query for middle/portrait size range
+
+*/
+@media screen and (min-width: 34em) {
+	
+	#site {
+		width: 34em;
+		margin: 0 auto;
+	}
+}
+
+/*
+--------------------------------------------------------
+media query for larger devices
+
+*/
+@media screen and (min-width: 63em) {
+
+	#site {
+		width: 63em;
+		margin: 0 auto;
+	}
+	
+	div.col.articles, div.col.media {
+		width: 49%;
+		margin-top: 14em;
+	}
+	
+	div.col.articles {
+		float: left;
+		margin-right: 2%;
+	}
+	div.col.media {
+		float: right;
+	}
+	
+	section > article h2 {
+		font-size: 1.0em;
+	}
+	section#who {
+		width: 100%;
+		position: absolute;
+		top: 4.5em;
+	}
+	section#who h1 {
+		padding-left: 0.7em;
+	}
+	section#who div.description, section#who div.who {
+		width: 49%;
+	}
+	section#who div.description {
+		float: left;
+	}
+	section#who div.who {
+		float: right;
+	}
+	
+	nav#social {
+		position: absolute;
+		top: 1em;
+		right: 0;
+	}
+	
+	nav#social a.icon {
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-image: url(../img/social-icons-small.svg);
+		background-repeat: none;
+		overflow: hidden;
+		text-indent: -10em;
+	}
+	nav#social a.icon.linkedin {
+		background-position: 0 0;
+	}
+	nav#social a.icon.twitter {
+		background-position: -22px 0;
+	}
+	nav#social a.icon.tumblr {
+		background-position: -44px 0;
+	}
+	nav#social a.icon.flickr {
+		background-position: -66px 0;
+	}
+	nav#social a.icon.vimeo {
+		background-position: -88px 0;
+	}
+	
 }
