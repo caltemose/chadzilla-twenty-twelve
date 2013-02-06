@@ -164,10 +164,16 @@ nav#social a.icon {
 	width: 36px;
 	height: 36px;
 	margin-right: 0.6em;
-	background-image: url(../img/social-icons.svg);
-	background-repeat: none;
 	overflow: hidden;
 	text-indent: -10em;
+}
+.no-js nav#social a.icon, .no-svg nav#social a.icon {
+	background-image: url(../img/social-icons.png);
+	background-repeat: none;
+}
+.svg nav#social a.icon {
+	background-image: url(../img/social-icons.svg);
+	background-repeat: none;
 }
 nav#social a.icon.linkedin {
 	background-position: 0 0;
@@ -255,10 +261,16 @@ media query for larger devices
 		display: block;
 		width: 20px;
 		height: 20px;
-		background-image: url(../img/social-icons-small.svg);
-		background-repeat: none;
 		overflow: hidden;
 		text-indent: -10em;
+	}
+	.no-js nav#social a.icon, .no-svg nav#social a.icon {
+		background-image: url(../img/social-icons-small.png);
+		background-repeat: none;
+	}
+	.svg nav#social a.icon {
+		background-image: url(../img/social-icons-small.svg);
+		background-repeat: none;
 	}
 	nav#social a.icon.linkedin {
 		background-position: 0 0;
