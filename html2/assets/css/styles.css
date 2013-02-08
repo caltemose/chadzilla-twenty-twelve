@@ -43,33 +43,13 @@ site container and primary header
 	width: 100%;
 	position: relative;
 }
-
 #site > header {
 	background: #2f2f2f;
 	padding: 0.6em 0 0.3em 6.25%;
 	border-bottom: 0.1875em solid #b6b6b6;
 }
-#site > header h1, #site > header h2 {
-	font-size: 0.1em;
-	margin: 0;
-	padding: 0;
-	text-indent: -9999px;
-	overflow: hidden;
-}
-#site > header h1 {
-	height: 46px;/*5em;*/
-}
-#site > header h2 {
-	display: none;
-}
-.no-js #site > header h1, .no-svg #site > header h1 {
-	font-size: 1.0em;
-	background: url('../img/logo.png') no-repeat;
-	min-width: 340px;
-	min-height: 46px;
-}
-.svg #site > header h1 {
-	background: url('../img/logo.svg') no-repeat;
+#site > header img {
+	margin-bottom: 0.4em;
 }
 
 
@@ -185,12 +165,8 @@ nav#social a.icon {
 	overflow: hidden;
 	text-indent: -10em;
 }
-.no-js nav#social a.icon, .no-svg nav#social a.icon {
+nav#social a.icon {
 	background-image: url(../img/social-icons.png);
-	background-repeat: none;
-}
-.svg nav#social a.icon {
-	background-image: url(../img/social-icons.svg);
 	background-repeat: none;
 }
 nav#social a.icon.linkedin {
@@ -199,14 +175,11 @@ nav#social a.icon.linkedin {
 nav#social a.icon.twitter {
 	background-position: -40px 0;
 }
-nav#social a.icon.tumblr {
+nav#social a.icon.flickr {
 	background-position: -80px 0;
 }
-nav#social a.icon.flickr {
-	background-position: -120px 0;
-}
 nav#social a.icon.vimeo {
-	background-position: -160px 0;
+	background-position: -120px 0;
 }
 
 
@@ -237,14 +210,11 @@ media query for larger devices
 	#site > header {
 		padding-left: 3%;
 	}
-	#site > header h1 {
-		max-width: 500px;
-	}
+
 	div.col.articles, div.col.media {
 		width: 49%;
 		margin-top: 13em;
 	}
-	
 	div.col.articles {
 		float: left;
 		margin-right: 2%;
