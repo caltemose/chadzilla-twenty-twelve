@@ -148,6 +148,119 @@ section#who h1 {
 	margin-bottom: 0.4em;
 }
 
+
+
+/*
+--------------------------------------------------------
+work page
+
+*/
+section#timeline {
+	border-bottom: none;
+}
+#timeline {
+	position: relative;
+}
+#timeline ul {
+	list-style: none;
+}
+ul.time-scale {
+	margin: 1em 6.25%;
+	padding: 0;
+	border-top: 1px solid #aaa;
+}
+ul.time-scale li {
+	font-family: Georgia, serif;
+	font-size: 1.2em;
+	color: #aaa;
+	height: 40px;
+	padding: 0.8em 0 0 0.2em;
+	border-bottom: 1px solid #aaa;
+}
+ul.jobs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	margin: 0 0 0 20%;
+	padding: 0;
+}
+ul.jobs li {
+	font-family: Dosis, sans-serif;
+	color: #fff;
+	font-size: 0.8em;
+	padding: 0.3em 1em;
+	margin: 0;
+}
+ul.jobs #circus {
+	background: #6db801; /* 1 */
+	height: 90px;
+	margin-top: 3.2em;
+	padding-top: 2em;
+}
+ul.jobs #webmd {
+	background: #407100; /* 2 */
+	height: 24px;
+}
+ul.jobs #sabbatical {
+	background: #4a4a4a;
+	margin-top: 14px;
+	height: 24px;
+}
+ul.jobs #feet17 {
+	background: #64891f; /* 3 */
+	height: 49px;
+}
+ul.jobs #dev {
+	background: #6db801;
+	height: 60px;
+}
+ul.jobs #wideray {
+	background: #407100;
+	height: 38px;
+}
+ul.jobs #gqpsf {
+	margin-top: 12px;
+	background: #64891f;
+	height: 30px;
+}
+ul.jobs #tas {
+	margin-top: 9px;
+	background: #6db801;
+	height: 195px;
+}
+ul.jobs #ketchum {
+	background: #407100;
+	height: 36px;
+}
+ul.jobs #cnn {
+	background: #64891f;
+	height: 24px;
+}
+ul.jobs #imi {
+	margin-top: 4px;
+	background: #6db801;
+	height: 90px;
+}
+ul.jobs #honeywell {
+	margin-top: 4px;
+	background: #407100;
+	height: 36px;
+}
+
+
+#jobOverlay {
+	position: absolute;
+	top: 2.5em;
+	left: 20%;
+	background: #000;
+	min-height: 48em;
+}
+
+
+
+
+
 /*
 --------------------------------------------------------
 social navigation icons
@@ -214,6 +327,11 @@ media query for larger devices
 	div.col.articles, div.col.media {
 		width: 49%;
 		margin-top: 13em;
+	}
+	div.col.work {
+		float: left;
+		width: 49%;
+		margin-right: 2%;
 	}
 	div.col.articles {
 		float: left;
