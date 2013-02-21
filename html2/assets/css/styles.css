@@ -155,6 +155,14 @@ section#who h1 {
 work page
 
 */
+
+.col.work-info {
+	margin: 0 6.25% 2em 6.25%;
+}
+.col.work-info h1 {
+	font-family: '../fonts/ChunkFiveRegular', Arial, sans-serif;
+	font-size: 2.0em;
+}
 section#timeline {
 	border-bottom: none;
 }
@@ -330,8 +338,15 @@ media query for larger devices
 	}
 	div.col.work {
 		float: left;
-		width: 49%;
-		margin-right: 2%;
+		position: relative;
+		width: 45%;
+		margin: 1em 0% 0 0;
+	}
+	div.col.work-info {
+		float: right;
+		position: relative;
+		width: 40%;
+		margin: 1em 12% 0 0;
 	}
 	div.col.articles {
 		float: left;
